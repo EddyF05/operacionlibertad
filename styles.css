@@ -1,0 +1,339 @@
+/* Estilos globales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body { 
+  margin: 0; 
+  padding: 0; 
+  font-family: Arial, sans-serif; 
+  transition: background-color 0.5s ease; 
+  overflow-x: hidden;
+  font-family: 'Utendo', sans-serif; /* Aplicando la fuente Utendo */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos del header */
+.header { 
+  background-color: #1a1a6e; 
+  padding: 10px; 
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 1000;
+}
+.header-content { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+.header .logo img { 
+  height: 60px; /* Aumentar tamaño del logo */
+}
+.header .title { 
+  color: white; 
+  font-size: 24px; 
+  text-align: center; /* Centrar el título */
+  margin-left: 10px; /* Añadir margen entre el logo y el título */
+}
+
+/* Estilos para la barra de navegación */
+.nav-bar { 
+  background-color: #1a1a6e; 
+  width: 100%; 
+  z-index: 999; 
+}
+.nav-bar ul { 
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+  display: flex; 
+  justify-content: space-evenly; 
+}
+.nav-bar ul li { 
+  padding: 10px; 
+}
+.nav-bar ul li a { 
+  color: white; 
+  text-decoration: none; 
+  font-size: 16px; 
+}
+.nav-bar ul li a:hover { 
+  text-decoration: underline; 
+}
+
+/* Estilos para el menú desplegable */
+.dropdown { 
+  position: relative; 
+  z-index: 1000; 
+}
+.dropdown-content { 
+  display: none; 
+  background-color: #3f51b5; 
+  min-width: 160px; 
+  position: absolute; 
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+  z-index: 1; 
+}
+.dropdown-content a { 
+  color: white; 
+  padding: 12px 16px; 
+  text-decoration: none; 
+  display: block; 
+}
+.dropdown-content a:hover { 
+  background-color: #1a237e; 
+}
+.dropdown:hover .dropdown-content { 
+  display: block; 
+}
+
+/* Estilos para la sección de bienvenida */
+.bienvenida { 
+  text-align: center; 
+  padding: 50px 0; 
+  background-color: #e3f2fd; 
+  margin-top: 100px; 
+}
+.bienvenida h2 { 
+  color: #1a1a6e; 
+}
+.bienvenida-content { 
+  display: flex; 
+  flex-direction: column; /* Alinea verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  gap: 20px;
+}
+.bienvenida-text { 
+  max-width: 70%; 
+  font-size: 18px; 
+  text-align: justify; 
+  margin-bottom: 20px; 
+}
+.bienvenida-image { 
+  display: flex; 
+  justify-content: center; 
+  gap: 20px; 
+}
+.bienvenida-image img { 
+  max-width: 50%; 
+  border: 2px solid white; 
+  border-radius: 10px; 
+  opacity: 0; 
+  transition: opacity 1s ease; 
+}
+.bienvenida-image img.animated-image { 
+  opacity: 1; 
+}
+.bienvenida p { 
+  color: #1a1a6e; 
+  font-size: 18px; 
+}
+.bienvenida .eslogan { 
+  font-size: 20px; 
+  font-weight: bold; 
+  text-align: center; 
+}
+
+/* Estilos para el footer (barra de contacto) */
+.footer { 
+  background-color: #1a1a6e; 
+  color: white; 
+  padding: 10px; 
+  text-align: center; 
+  width: 100%; 
+}
+.footer .social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.footer .social-media a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+.footer .social-media img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+#quienes-somos { 
+  scroll-margin-top: 100px; 
+}
+.main-content { 
+  margin-top: 100px; 
+}
+
+.page-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #0056b3; /* Azul fuerte */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.page-text {
+  text-align: justify;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.image-container {
+  width: 30%; /* Ajusta el ancho de las imágenes según sea necesario */
+  margin: 20px;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 10px; /* Agrega bordes redondeados a las imágenes */
+}
+
+.text-container {
+  width: 60%; /* Ajusta el ancho del contenedor de texto según sea necesario */
+  margin: 20px;
+}
+.carousel { 
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Ajusta el ancho del carrusel */
+  margin: 0 auto; /* Centra el carrusel en la página */
+  height: 500px; /* Fija una altura para el contenedor del carrusel */
+}
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%; /* Asegura que las imágenes ocupen el 100% del contenedor del carrusel */
+}
+.carousel-item {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center; /* Centra verticalmente las imágenes */
+  justify-content: center; /* Centra horizontalmente las imágenes */
+}
+.carousel-item img {
+  max-width: 100%; /* Ajusta el tamaño máximo de las imágenes */
+  max-height: 100%; /* Ajusta la altura máxima de las imágenes */
+  object-fit: contain; /* Asegura que las imágenes mantengan su proporción y se contengan dentro del marco */
+}
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.carousel-prev {
+  left: 10px;
+}
+.carousel-next {
+  right: 10px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .header-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .nav-bar ul {
+      flex-direction: column;
+  }
+
+  .nav-bar ul li {
+      text-align: center;
+      width: 100%;
+  }
+
+  .bienvenida-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .bienvenida-text, .text-container {
+      width: 90%;
+  }
+
+  .bienvenida-image, .image-container {
+      width: 90%;
+      margin: 10px 0;
+  }
+
+  .carousel {
+      height: auto; /* Permitir que la altura se ajuste automáticamente */
+  }
+
+  .header .title {
+      font-size: 20px;
+  }
+
+  .nav-bar ul li a {
+      font-size: 14px;
+  }
+
+  .bienvenida-text, .text-container {
+      font-size: 16px;
+      text-align: justify;
+  }
+
+  .bienvenida p, .eslogan {
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .title {
+      font-size: 20px;
+      margin: 5px 0;
+  }
+
+  .bienvenida h2 {
+      font-size: 24px;
+  }
+
+  .bienvenida-text, .text-container {
+      font-size: 16px;
+  }
+
+  .eslogan {
+      font-size: 18px;
+  }
+
+  .video-area iframe {
+      width: 100%;
+      height: auto;
+  }
+  
+  .footer {
+      padding: 20px;
+  }
+
+  .footer .social-media {
+      flex-direction: column;
+  }
+
+  .footer .social-media a {
+      margin: 5px 0;
+  }
+}
+
